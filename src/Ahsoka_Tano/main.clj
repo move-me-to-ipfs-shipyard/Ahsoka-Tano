@@ -57,7 +57,7 @@
 (defonce ops| (chan 10))
 (defonce table| (chan (sliding-buffer 10)))
 (defonce sub| (chan (sliding-buffer 10)))
-(defonce server| (chan 1))
+(defonce host| (chan 1))
 (def ^:const jframe-title "surrender - or face the consequences")
 (def ^:dynamic ^JFrame jframe nil)
 
@@ -131,7 +131,7 @@
                                  (windowClosing [event]
                                    (let [event ^WindowEvent event]
                                      #_(println :window-closing)
-                                     (put! server| true)
+                                     (put! host| true)
                                      (-> event (.getWindow) (.dispose)))))))
 
          (doto jroot-panel
@@ -206,5 +206,5 @@
                    3355)]
       (Ahsoka-Tano.microwaved-onions/process
        {:port port
-        :server| server|})))
+        :host| host|})))
   (println "Kuiil has spoken"))
