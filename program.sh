@@ -2,7 +2,7 @@
 
 repl(){
   clj \
-    -J-Dclojure.core.async.pool-size=1 \
+    -J-Dclojure.core.async.pool-size=8 \
     -X:Ripley Ripley.core/process \
     :main-ns Ahsoka-Tano.main
 }
@@ -10,7 +10,7 @@ repl(){
 
 main(){
   clojure \
-    -J-Dclojure.core.async.pool-size=1 \
+    -J-Dclojure.core.async.pool-size=8 \
     -M -m Ahsoka-Tano.main
 }
 
@@ -25,20 +25,14 @@ tag(){
 
 jar(){
 
-  clojure \
-    -X:Zazu Zazu.core/process \
-    :word '"Ahsoka-Tano"' \
-    :filename '"out/identicon/icon.png"' \
-    :size 256
-
-  rm -rf out/*.jar
+  rm -rf out/*.jar out/classes
   COMMIT_HASH=$(git rev-parse --short HEAD)
   COMMIT_COUNT=$(git rev-list --count HEAD)
   clojure \
     -X:Genie Genie.core/process \
     :main-ns Ahsoka-Tano.main \
     :filename "\"out/Ahsoka-Tano-$COMMIT_COUNT-$COMMIT_HASH.jar\"" \
-    :paths '["src" "out/identicon"]'
+    :paths '["src"]'
 }
 
 release(){
