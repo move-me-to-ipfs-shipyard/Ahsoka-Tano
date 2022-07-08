@@ -1,4 +1,4 @@
-(ns Ahsoka-Tano.mandarins
+(ns Ahsoka-Tano.pears
   (:require
    [clojure.core.async
     :refer [chan put! take! close! offer! to-chan! timeout thread

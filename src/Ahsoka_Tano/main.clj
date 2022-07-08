@@ -15,7 +15,7 @@
    [datahike.api]
    [taoensso.timbre]
 
-   [Ahsoka-Tano.mandarins]
+   [Ahsoka-Tano.pears]
    [Ahsoka-Tano.B12]
    [Ahsoka-Tano.salt]
    [Ahsoka-Tano.bread]
@@ -65,7 +65,7 @@
 (defn reload
   []
   (require
-   '[Ahsoka-Tano.mandarins]
+   '[Ahsoka-Tano.pears]
    '[Ahsoka-Tano.B12]
    '[Ahsoka-Tano.salt]
    '[Ahsoka-Tano.bread]
@@ -189,7 +189,7 @@
 
 
       (let [jtabbed-pane (JTabbedPane.)
-            jpanel-mandarins (JPanel.)
+            jpanel-pears (JPanel.)
             jpanel-B12 (JPanel.)
             jpanel-salt (JPanel.)
             jpanel-bread (JPanel.)
@@ -197,7 +197,7 @@
 
         (doto jtabbed-pane
           (.setTabLayoutPolicy JTabbedPane/SCROLL_TAB_LAYOUT)
-          (.addTab "mandarins" jpanel-mandarins)
+          (.addTab "pears" jpanel-pears)
           (.addTab "B12" jpanel-B12)
           (.addTab "salt" jpanel-salt)
           (.addTab "bread" jpanel-bread)
