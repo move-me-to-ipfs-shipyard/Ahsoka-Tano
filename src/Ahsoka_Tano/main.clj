@@ -19,7 +19,7 @@
    [Ahsoka-Tano.B12]
    [Ahsoka-Tano.salt]
    [Ahsoka-Tano.bread]
-   [Ahsoka-Tano.wine])
+   [Ahsoka-Tano.raisins])
   (:import
    (javax.swing JFrame WindowConstants JPanel JScrollPane JTextArea BoxLayout JEditorPane ScrollPaneConstants SwingUtilities JDialog)
    (javax.swing JMenu JMenuItem JMenuBar KeyStroke JOptionPane JToolBar JButton JToggleButton JSplitPane JLabel JTextPane JTextField JTable JTabbedPane)
@@ -69,7 +69,7 @@
    '[Ahsoka-Tano.B12]
    '[Ahsoka-Tano.salt]
    '[Ahsoka-Tano.bread]
-   '[Ahsoka-Tano.wine]
+   '[Ahsoka-Tano.raisins]
    '[Ahsoka-Tano.main]
    :reload))
 
@@ -193,7 +193,7 @@
             jpanel-B12 (JPanel.)
             jpanel-salt (JPanel.)
             jpanel-bread (JPanel.)
-            jpanel-wine (JPanel.)]
+            jpanel-raisins (JPanel.)]
 
         (doto jtabbed-pane
           (.setTabLayoutPolicy JTabbedPane/SCROLL_TAB_LAYOUT)
@@ -201,7 +201,7 @@
           (.addTab "B12" jpanel-B12)
           (.addTab "salt" jpanel-salt)
           (.addTab "bread" jpanel-bread)
-          (.addTab "wine" jpanel-wine)
+          (.addTab "raisins" jpanel-raisins)
           (.setSelectedComponent jpanel-bread))
 
         (Ahsoka-Tano.bread/process {:jpanel-tab jpanel-bread
