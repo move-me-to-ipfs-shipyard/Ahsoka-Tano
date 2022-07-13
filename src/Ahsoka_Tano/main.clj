@@ -18,7 +18,7 @@
    [Ahsoka-Tano.pears]
    [Ahsoka-Tano.B12]
    [Ahsoka-Tano.salt]
-   [Ahsoka-Tano.bread]
+   [Ahsoka-Tano.oats]
    [Ahsoka-Tano.raisins])
   (:import
    (javax.swing JFrame WindowConstants JPanel JScrollPane JTextArea BoxLayout JEditorPane ScrollPaneConstants SwingUtilities JDialog)
@@ -68,7 +68,7 @@
    '[Ahsoka-Tano.pears]
    '[Ahsoka-Tano.B12]
    '[Ahsoka-Tano.salt]
-   '[Ahsoka-Tano.bread]
+   '[Ahsoka-Tano.oats]
    '[Ahsoka-Tano.raisins]
    '[Ahsoka-Tano.main]
    :reload))
@@ -192,7 +192,7 @@
             jpanel-pears (JPanel.)
             jpanel-B12 (JPanel.)
             jpanel-salt (JPanel.)
-            jpanel-bread (JPanel.)
+            jpanel-oats (JPanel.)
             jpanel-raisins (JPanel.)]
 
         (doto jtabbed-pane
@@ -200,11 +200,11 @@
           (.addTab "pears" jpanel-pears)
           (.addTab "B12" jpanel-B12)
           (.addTab "salt" jpanel-salt)
-          (.addTab "bread" jpanel-bread)
+          (.addTab "oats" jpanel-oats)
           (.addTab "raisins" jpanel-raisins)
-          (.setSelectedComponent jpanel-bread))
+          (.setSelectedComponent jpanel-oats))
 
-        (Ahsoka-Tano.bread/process {:jpanel-tab jpanel-bread
+        (Ahsoka-Tano.oats/process {:jpanel-tab jpanel-oats
                                :db-data-dirpath db-data-dirpath})
 
         (settings-process {:jpanel-tab jpanel-B12
