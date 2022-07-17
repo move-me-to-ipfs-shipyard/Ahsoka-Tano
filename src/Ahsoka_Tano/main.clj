@@ -16,6 +16,7 @@
    [taoensso.timbre]
 
    [Ahsoka-Tano.pears]
+   [Ahsoka-Tano.grapefruit]
    [Ahsoka-Tano.B12]
    [Ahsoka-Tano.salt]
    [Ahsoka-Tano.bread]
@@ -66,6 +67,7 @@
   []
   (require
    '[Ahsoka-Tano.pears]
+   '[Ahsoka-Tano.grapefruit]
    '[Ahsoka-Tano.B12]
    '[Ahsoka-Tano.salt]
    '[Ahsoka-Tano.bread]
@@ -190,6 +192,7 @@
 
       (let [jtabbed-pane (JTabbedPane.)
             jpanel-pears (JPanel.)
+            jpanel-grapefruit (JPanel.)
             jpanel-B12 (JPanel.)
             jpanel-salt (JPanel.)
             jpanel-bread (JPanel.)
@@ -198,6 +201,7 @@
         (doto jtabbed-pane
           (.setTabLayoutPolicy JTabbedPane/SCROLL_TAB_LAYOUT)
           (.addTab "pears" jpanel-pears)
+          (.addTab "grapefruit" jpanel-grapefruit)
           (.addTab "B12" jpanel-B12)
           (.addTab "salt" jpanel-salt)
           (.addTab "bread" jpanel-bread)
