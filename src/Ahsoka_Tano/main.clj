@@ -20,6 +20,7 @@
    [Ahsoka-Tano.B12]
    [Ahsoka-Tano.salt]
    [Ahsoka-Tano.bread]
+   [Ahsoka-Tano.water]
    [Ahsoka-Tano.raisins])
   (:import
    (javax.swing JFrame WindowConstants JPanel JScrollPane JTextArea BoxLayout JEditorPane ScrollPaneConstants SwingUtilities JDialog)
@@ -71,6 +72,7 @@
    '[Ahsoka-Tano.B12]
    '[Ahsoka-Tano.salt]
    '[Ahsoka-Tano.bread]
+   '[Ahsoka-Tano.water]
    '[Ahsoka-Tano.raisins]
    '[Ahsoka-Tano.main]
    :reload))
@@ -196,6 +198,7 @@
             jpanel-B12 (JPanel.)
             jpanel-salt (JPanel.)
             jpanel-bread (JPanel.)
+            jpanel-water (JPanel.)
             jpanel-raisins (JPanel.)]
 
         (doto jtabbed-pane
@@ -205,6 +208,7 @@
           (.addTab "B12" jpanel-B12)
           (.addTab "salt" jpanel-salt)
           (.addTab "bread" jpanel-bread)
+          (.addTab "water" jpanel-water)
           (.addTab "raisins" jpanel-raisins)
           (.setSelectedComponent jpanel-bread))
 
