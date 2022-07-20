@@ -15,7 +15,6 @@
    [datahike.api]
    [taoensso.timbre]
 
-   [Ahsoka-Tano.water]
    [Ahsoka-Tano.pears]
    [Ahsoka-Tano.B12]
    [Ahsoka-Tano.salt]
@@ -66,7 +65,6 @@
 (defn reload
   []
   (require
-   '[Ahsoka-Tano.water]
    '[Ahsoka-Tano.pears]
    '[Ahsoka-Tano.B12]
    '[Ahsoka-Tano.salt]
